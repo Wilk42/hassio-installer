@@ -139,6 +139,8 @@ EOF
 ##
 # Pull supervisor image
 echo "[Info] Install supervisor Docker container"
+echo "[Info] $HASSIO_DOCKER:$HASSIO_VERSION"
+
 docker pull "$HASSIO_DOCKER:$HASSIO_VERSION" > /dev/null
 docker tag "$HASSIO_DOCKER:$HASSIO_VERSION" "$HASSIO_DOCKER:latest" > /dev/null
 
