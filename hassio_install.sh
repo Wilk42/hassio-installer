@@ -4,7 +4,7 @@ set -e
 ARCH=$(uname -m)
 DOCKER_BINARY=/usr/bin/podman
 DOCKER_REPO=homeassistant
-DOCKER_SERVICE=docker.service
+DOCKER_SERVICE=podman
 URL_VERSION="https://version.home-assistant.io/stable.json"
 URL_BIN_HASSIO="https://raw.githubusercontent.com/Wilk42/hassio-installer/master/files/hassio-supervisor"
 URL_BIN_APPARMOR="https://raw.githubusercontent.com/Wilk42/hassio-installer/master/files/hassio-apparmor"
