@@ -2,7 +2,7 @@
 set -e
 
 ARCH=$(uname -m)
-DOCKER_BINARY=/usr/bin/docker
+DOCKER_BINARY=/usr/bin/podman
 DOCKER_REPO=homeassistant
 DOCKER_SERVICE=docker.service
 URL_VERSION="https://version.home-assistant.io/stable.json"
@@ -29,6 +29,7 @@ fi
 
 # Detect if running on snapped docker
 if snap list docker >/dev/null 2>&1; then
+    echo "[Info] Snapd"
     DOCKER_BINARY=/snap/bin/docker
     DATA_SHARE=/root/snap/docker/common/hassio
     CONFIG=$DATA_SHARE/hassio.json
